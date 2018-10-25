@@ -5,6 +5,7 @@ class ChangePersonIdToBeForeignKeyInCars < ActiveRecord::Migration[5.2]
   end
 
   def down
-    create_column :cars, :person_id, :integer
+    remove_column :cars, :person_id, :integer
+    add_column :cars, :person_id, :integer
   end
 end
