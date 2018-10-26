@@ -4,6 +4,6 @@ class CarsController < ApplicationController
   end
 
   def show
-    render json: Car.find(id: params[:id])
+    render json: Car.find(params[:id])
   end
 end
